@@ -1,0 +1,239 @@
+/* ======================= */
+/*    HEADER               */
+/* ======================= */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c6140c;
+    color: #fff;
+    padding: 5px 0;
+    box-shadow: 0 2px 5px #c6140c;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: top 0.32s;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-left: 16px;
+    min-width: 0;
+    max-width: none;
+    flex: 0 0 auto;
+}
+
+.logo img {
+    width: 260px;
+    height: auto;
+    background: transparent;
+
+}
+
+.logo span {
+  display: block;
+  text-align: left;
+  line-height: 1.1;
+  font-size: 1.1em;
+  color: black;
+  margin-left: 2px;
+  max-width: 100px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  align-self: center;
+  margin-bottom: 0;
+  transform: none;
+margin-top:21px
+}
+
+
+nav#main-nav {
+  flex: 2 1 100px;
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+
+}
+
+
+nav#main-nav ul {
+  scrollbar-width: thin; /* Firefox */
+}
+nav#main-nav ul::-webkit-scrollbar {
+  height: 6px;  /* Chrome/Safari */
+}
+nav#main-nav ul::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+nav#main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav#main-nav li a,
+nav#main-nav li a:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff !important; /* Texto blanco */
+    font-size: 1em;
+    transition: color 0.2s, background 0.2s;
+    padding: 4px 10px;
+    border-radius: 8px;
+    line-height: 1.5;
+    white-space: nowrap;
+    background: transparent !important;
+}
+
+nav#main-nav li a:hover,
+nav#main-nav li a:focus {
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: 0 2px 12px -8px #3332;
+    text-decoration: none;
+}
+
+nav#main-nav li a.selected,
+nav#main-nav li a.active {
+    color: #000 !important;
+    background: #c6140c !important;
+    border-radius: 8px;
+    padding: 4px 14px;
+    box-shadow: 0 2px 12px -8px #3332;
+    cursor: default;
+    transition: background 0.18s, color 0.18s;
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+
+/* ======================= */
+/*    FOOTER               */
+/* ======================= */
+footer {
+    background: #2d2d2d;
+    color: #fff !important;
+    padding: 24px 12px 18px 12px;
+    text-align: center;
+    font-size: 1em;
+
+
+}
+
+.footer-content,
+.footer-top {
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 6px;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a,
+.footer-nav a:visited {
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 4px 10px;
+    border-radius: 7px;
+    transition: background 0.18s, color 0.18s;
+    display: inline-block;
+}
+
+.footer-nav a:hover,
+.footer-nav a.selected {
+    background: #c6140c !important;
+    color: #fff !important;
+}
+
+.footer-contacto {
+    min-width: 190px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.footer-contacto a,
+.footer-contacto a:visited {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 230px;
+    color: #fff !important;
+    font-size: 1em;
+    text-align: left;
+    gap: 10px;
+    border-radius: 7px;
+    padding: 4px 7px;
+    transition: background 0.15s, color 0.18s;
+}
+
+.footer-contacto a:hover {
+    background: #c6140c !important;
+    color: #fff !important;
+}
+
+.footer-contacto img {
+    width: 20px;
+    margin-right: 7px;
+}
+
+.footer-copyright {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.95em;
+    gap: 2px;
+    color: #fff !important;
+    opacity: 0.9;
+}
+
+

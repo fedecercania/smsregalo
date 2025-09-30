@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio – SMS Regalos - Premios y Noticias!</title>
+
+    <meta name="description" content="Suscribite para participar por $50.000 todos los meses y un Citroën C3 0km!">
+    <link rel="icon" href="/static/imagenes/favicon.png">
+
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"></noscript>
+
+
+
+<!-- Estilos principales -->
+<link rel="stylesheet" href="/static/css/base.css?v=20250930-5">
+    <link rel="stylesheet" href="/static/css/landing.css?v=20250930-17">
+<link rel="stylesheet" href="/static/css/header_footer.css?v=20250930-2">
+
+<link rel="stylesheet" href="/static/css/chat.css?v=20250930-1">
+
+<link rel="stylesheet" href="/static/css/modal.css?v=20250930-2">
+
+<link rel="stylesheet" href="/static/css/mobile.css?v=20250930-2">
+
+
+    
+
+
+<!-- Google Ads / DoubleClick -->
+<link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
+<link rel="preconnect" href="https://td.doubleclick.net" crossorigin>
+
+<!-- Facebook -->
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+
+<!-- Hotjar -->
+<link rel="preconnect" href="https://static.hotjar.com" crossorigin>
+
+<!-- Google Tag Manager -->
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+<!-- First-party user ID (external_id base) for Advanced Matching via CAPI -->
+<script>
+(function () {
+  function getCookie(name) {
+    var m = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    var expires = 'expires=' + d.toUTCString();
+    var secure = location.protocol === 'https:' ? '; Secure' : '';
+    document.cookie = name + '=' + encodeURIComponent(value) + '; Path=/; SameSite=Lax; ' + expires + secure;
+  }
+  function genUID() {
+    try {
+      var a = new Uint32Array(4);
+      if (crypto && crypto.getRandomValues) {
+        crypto.getRandomValues(a);
+        var hex=''; for (var i=0;i<a.length;i++) hex += a[i].toString(16);
+        return 'usr-' + Date.now() + '-' + hex;
+      }
+    } catch(e){}
+    return 'usr-' + Date.now() + '-' + Math.floor(Math.random()*1e9);
+  }
+  var uid = getCookie('smsr_uid');
+  if (!uid) { uid = genUID(); setCookie('smsr_uid', uid, 730); }
+  window.smsr_uid = uid;
+})();
+</script>
+
+<!-- Hotjar Tracking Code for https://smsregalos.com -->
+<script>
+  window.addEventListener("load", function() {
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:6466349,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  });
+</script>
+
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KWQM8QSZ');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWQM8QSZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+    <div class="logo">
+        <a href="/"><img src="/static/imagenes/logo_nuevo.webp" alt="SMS Regalos"></a>
+        <span>Premios y<br>Noticias</span>
+    </div>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="/noticias" class="" title="Noticias recientes y actualizaciones" aria-label="Noticias">Noticias</a></li>
+            <li><a href="/premios" class="" title="Premios y sorteos" aria-label="Premios">Premios</a></li>
+            <li><a href="/ganadores" class="" title="Ganadores de los sorteos" aria-label="Ganadores">Ganadores</a></li>
+
+            <li><a href="/preguntas" class="" title="Preguntas frecuentes" aria-label="Preguntas frecuentes">¿Dudas?</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+
+<main>
+
+
+  <section class="seccion-principal">
+
+    <h2>Suscribite para recibir noticias y participá por <b>$50.000</b> pesos todos los meses y un <b>Citroën C3 0km</b> a fin de año. 🎉</h2>
+
+    <div class="margen_arribayabajo">
+      <!-- BOTÓN PRINCIPAL -->
+<button id="boton-suscribite" class="breathing flecha-circular">Suscribite </button>
+
+
+
+    </div>
+
+    <img src="/static/imagenes/c3.webp" alt="SMS Regalos" loading="lazy">
+
+  <div class="margen_arriba_mini">
+
+      <h2>Suscribite con tiempo para tener <b>más chances</b> de ganar. Cada tres meses que mantengas tu suscripción generás <b>1 chance extra</b>.</h2>
+
+  </div>
+
+  </section>
+
+
+
+
+
+  
+
+
+<!-- DEBUG: raw=YW59Gn-RCyk, vid=YW59Gn-RCyk -->
+
+<div>
+  <h1 class="video-title">Último Ganador</h1>
+  <h2 class="video-subtitle">
+    Beatriz Cor 🥳
+  </h2> 
+</div>
+
+<div class="video-preview" tabindex="-1" onclick="loadIframe()" style="margin:16px auto;">
+  <img 
+    src="/static/imagenes/ganadores/ganadora_agosto.webp"
+    onerror="this.onerror=null;this.src='https://img.youtube.com/vi/YW59Gn-RCyk/hqdefault.jpg';"
+    alt="Ver último ganador" 
+    class="video-thumbnail"
+    loading="lazy">
+  <button class="play-button" aria-label="Reproducir video">❯</button>
+</div>
+
+<script>
+function loadIframe() {
+  const preview = document.querySelector('.video-preview');
+  const videoId = "YW59Gn-RCyk";
+  if (!preview) return;
+  
+  // Crear overlay de fondo
+  const overlay = document.createElement('div');
+  overlay.className = 'video-overlay active';
+  document.body.appendChild(overlay);
+  
+  // Agregar clase para el efecto de pantalla
+  preview.classList.add('playing');
+  
+  while (preview.firstChild) preview.removeChild(preview.firstChild);
+  const iframe = document.createElement('iframe');
+  iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0&playsinline=1`;
+  iframe.title = 'Video del ganador';
+  iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+  iframe.allowFullscreen = true;
+  iframe.loading = 'lazy';
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.border = 'none';
+  
+  // Crear botón de cerrar
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'video-close-btn';
+  closeBtn.innerHTML = '×';
+  closeBtn.onclick = closeVideo;
+  
+  // Efecto de carga suave
+  iframe.style.opacity = '0';
+  iframe.style.transition = 'opacity 0.5s ease';
+  preview.style.opacity = '0';
+  preview.style.transition = 'opacity 0.3s ease';
+  
+  preview.appendChild(iframe);
+  preview.appendChild(closeBtn);
+  
+  // Mostrar el iframe gradualmente
+  setTimeout(() => {
+    preview.style.opacity = '1';
+    iframe.style.opacity = '1';
+  }, 100);
+}
+
+function closeVideo() {
+  const preview = document.querySelector('.video-preview');
+  const overlay = document.querySelector('.video-overlay');
+  
+  // Remover clases y elementos
+  preview.classList.remove('playing');
+  preview.innerHTML = `
+    <img src="https://img.youtube.com/vi/YW59Gn-RCyk/maxresdefault.jpg" 
+         onerror="this.onerror=null;this.src='https://img.youtube.com/vi/YW59Gn-RCyk/hqdefault.jpg';"
+         alt="Miniatura del video del ganador"
+         class="video-thumbnail"
+    >
+    <button class="play-button" aria-label="Reproducir video">❯</button>
+  `;
+  
+  // Remover overlay
+  if (overlay) {
+    overlay.remove();
+  }
+  
+  // Agregar evento click nuevamente
+  preview.onclick = loadIframe;
+}
+</script>
+
+<style>
+  .video-preview {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  .video-thumbnail {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border: none;
+  }
+  .video-preview iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+    /* Efecto de pantalla con bordes internos */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8),
+                inset 0 0 40px rgba(255, 255, 255, 0.1),
+                inset 0 0 60px rgba(0, 0, 0, 0.9);
+    border: 3px solid #333;
+    border-radius: 8px;
+    /* Efecto de brillo en los bordes */
+    position: relative;
+  }
+  .video-preview iframe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+      transparent 0%, 
+      rgba(255, 255, 255, 0.1) 25%, 
+      transparent 50%, 
+      rgba(255, 255, 255, 0.1) 75%, 
+      transparent 100%);
+    pointer-events: none;
+    border-radius: 5px;
+  }
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6rem;
+    background: #c6140c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0px 0px 8px 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 4px 20px rgba(198, 20, 12, 0.4);
+  }
+  .play-button:hover { 
+    background: #b41215; 
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 6px 25px rgba(198, 20, 12, 0.6);
+  }
+  /* Efecto adicional para el contenedor cuando está reproduciendo */
+  .video-preview.playing {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90vw !important;
+    height: 90vh !important;
+    z-index: 9999 !important;
+    border-radius: 20px !important;
+    box-shadow: 
+      0 0 0 20px #1a1a1a,
+      0 0 0 25px #333,
+      0 0 50px rgba(0,0,0,0.9) !important;
+    background: #000 !important;
+    border: 3px solid #666 !important;
+  }
+  .video-preview.playing iframe {
+    border-radius: 15px !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Modal de video con efecto pantalla completa */
+  #modal-video.modal-suscripcion,
+  .modal-suscripcion#modal-video {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.95) !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #modal-video .modal-contenido,
+  .modal-contenido {
+    position: relative !important;
+    width: 95vw !important;
+    height: 95vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    background: #000 !important;
+    border-radius: 25px !important;
+    box-shadow: 
+      0 0 0 30px #1a1a1a,
+      0 0 0 35px #333,
+      0 0 60px rgba(0,0,0,0.8) !important;
+    border: 4px solid #666 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  #modal-video .video-container {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  #modal-video iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    border-radius: 20px !important;
+  }
+
+  #modal-video #cerrar-modal-video {
+    position: absolute !important;
+    top: -20px !important;
+    right: -20px !important;
+    width: 50px !important;
+    height: 50px !important;
+    background: #ff4444 !important;
+    border: 4px solid #fff !important;
+    border-radius: 50% !important;
+    color: white !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10001 !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
+    padding: 0 !important;
+  }
+
+  #modal-video #cerrar-modal-video:hover {
+    background: #ff6666 !important;
+    transform: scale(1.1) !important;
+  }
+
+  /* Ocultar elementos que no necesitamos en pantalla completa */
+  #modal-video #modal-video-titulo,
+  #modal-video #modal-video-descripcion,
+  #modal-video #btn-prev-video,
+  #modal-video #btn-next-video {
+    display: none !important;
+  }
+
+  /* Forzar estilos para modal activo */
+  div[id="modal-video"][class*="modal-suscripcion"][style*="display: flex"] {
+    background: rgba(0, 0, 0, 0.95) !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 99999 !important;
+  }
+
+  div[id="modal-video"] div[class*="modal-contenido"] {
+    background: #000 !important;
+    border: 4px solid #666 !important;
+    border-radius: 25px !important;
+    box-shadow: 
+      0 0 0 30px #1a1a1a,
+      0 0 0 35px #333,
+      0 0 60px rgba(0,0,0,0.8) !important;
+    width: 95vw !important;
+    height: 95vh !important;
+    padding: 0 !important;
+  }
+</style>
+
+
+  <div class="margen_arribayabajo">
+    <p>👉 Mirá los <a href="/ganadores" class="tarjet_blanc">Ganadores anteriores</a>.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-top">
+      <!-- LINKS LEGALES A LA IZQUIERDA -->
+      <nav class="footer-nav">
+        <ul>
+          <li>
+            <a href="/nosotros" class="">Sobre Nosotros</a>
+          </li>
+<li>
+  <a href="/sorteos" class="">Sorteos</a>
+</li>
+          <li>
+            <a href="/bases" class="">Bases</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- BLOQUE DE CONTACTO CENTRADO EN LA FILA -->
+      <div class="footer-contacto">
+        <a href="https://fb.com/smsregalos" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="/static/imagenes/fb-icon.png" alt="Facebook">fb.com/smsregalos
+        </a>
+        <a href="https://wa.me/59892674777?text=Hola,%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Whatsapp">
+          <img src="/static/imagenes/whatsapp-icon.png" alt="Whatsapp">092 674 777
+        </a>
+        <a href="mailto:smsregalos@gmail.com" target="_blank" aria-label="Email">
+          <img src="/static/imagenes/email-icon.png" alt="e-mail">smsregalos@gmail.com
+        </a>
+      </div>
+    </div>
+    <!-- COPYRIGHT ABAJO -->
+    <div class="footer-copyright">
+      <span>&copy; 2025 SMSRegalos.com - Todos los derechos reservados</span>
+      <span>Hecho con 🤍 en Uruguay</span>
+    </div>
+  </div>
+</footer>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/static/main.js" defer></script>
+
+
+<!-- Chatbot Widget SMSRegalos -->
+<div id="chat-widget">
+  <div id="chat-header">💬 ¿Necesitás ayuda?</div>
+  <div id="chat-body">
+    <div id="chat-messages"></div>
+    <form id="chat-form">
+      <input type="text" id="chat-input" placeholder="Escribí tu pregunta..." autocomplete="off" required />
+      <button type="submit">➤</button>
+    </form>
+  </div>
+</div>
+
+<!-- Script Chatbot -->
+<script src="/static/chatbot_script.js?v=1759021403"></script>
+
+<!-- MODAL DE SUSCRIPCIÓN - Flotante independiente -->
+<div id="modal-suscripcion" class="modal-suscripcion">
+  <!-- Botón cerrar -->
+  <span class="modal-cerrar" id="cerrar-modal">&times;</span>
+
+  <!-- Contenido del modal -->
+  <div class="modal-contenido">
+    <h1>Temas Disponibles</h1>
+
+    <!-- Línea SMS -->
+    <div class="linea-con-icono">
+      <img src="/static/imagenes/popup/antel.png" alt="Antel" class="icono-inline logo-antel">
+      <img src="/static/imagenes/popup/movistar.png" alt="Movistar" class="icono-inline logo-movistar">
+    </div>
+
+    <!-- Lista de opciones SMS -->
+    <div class="equipos-lista">
+      <div class="equipo-item" data-mensaje="MANYA">
+        <img src="/static/imagenes/popup/manya.png" alt="Manya">
+        <div>MANYA</div>
+      </div>
+      <div class="equipo-item" data-mensaje="BOLSO">
+        <img src="/static/imagenes/popup/bolso.png" alt="Bolso">
+        <div>BOLSO</div>
+      </div>
+      <div class="equipo-item" data-mensaje="CELESTE">
+        <img src="/static/imagenes/popup/celeste.png" alt="Celeste">
+        <div>CELESTE</div>
+      </div>
+      <div class="equipo-item" data-mensaje="TRIPLE">
+        <img src="/static/imagenes/popup/basket.png" alt="Basquetbol">
+        <div>BASQUET</div>
+      </div>
+      <div class="equipo-item" data-mensaje="ROCK">
+        <img src="/static/imagenes/popup/rock.png" alt="Rock">
+        <div>ROCK</div>
+      </div>
+    </div>
+
+    <!-- Mensaje de error en desktop -->
+    <div id="no-mobile-msg" style="color: #e41a1c; display: none; margin-top: 0.6rem;"></div>
+
+    <!-- Opciones Mercado Pago -->
+    <div class="planes-lista">
+      <div class="linea-con-icono">
+        <img src="/static/imagenes/popup/mercadopago.png" alt="Mercado Pago" class="icono-inline logo-mp">
+      </div>
+
+      <div class="plan-card" data-mensaje="MERCADOPAGO-MENSUAL">
+        <img src="/static/imagenes/popup/celeste.png" alt="Logo Celeste">
+        <div class="titulo">FÚTBOL</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.page_event_id = 'evt-' + Date.now() + '-' + Math.floor(Math.random() * 100000);
+  window.dataLayer = window.dataLayer || [];
+
+  // Push con evento nombrado
+  window.dataLayer.push({
+    event: 'set_event_id',
+    event_id: window.page_event_id
+  });
+</script>
+
+</body>
+</html>

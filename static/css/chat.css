@@ -1,0 +1,258 @@
+/* ------------------------------
+   🖥️ ESTILO GENERAL (DESKTOP)
+------------------------------ */
+#chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: auto;
+
+  font-family: sans-serif;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: calc(100vw - 20px); /* Nunca más allá del borde derecho */
+  box-sizing: border-box;        /* ¡Clave! Incluye border/padding en el ancho */
+
+}
+
+#chat-header {
+  background-color: #c6140c;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-size: 1em;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+#chat-header:hover {
+  transform: scale(1.05);
+}
+
+/* Estado abierto: header rojo no transparente */
+#chat-header.open {
+  background: #c6140c; /* Rojo sólido, no transparente */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 10px 15px;
+  border-radius: 12px 12px 0 0; /* Esquinas redondeadas arriba */
+  cursor: default;
+  color: white;
+  width: 400px; /* Mismo ancho que el chat-body */
+  border: 1px solid #c6140c; /* Borde rojo */
+  border-bottom: none; /* Sin borde inferior para que esté pegado */
+  box-sizing: border-box;
+}
+
+#chat-body {
+  display: none;
+  flex-direction: column;
+  width: 400px;
+  height: 500px; /* Altura fija mucho más alta */
+
+  margin-top: 0px; /* Sin margen para que esté pegado al header */
+  background: #fce4ec; /* Rosa claro sólido, no opaco */
+  border-radius: 0 0 12px 12px; /* Solo esquinas inferiores redondeadas */
+  border: 1px solid #f8bbd9; /* Borde rosa claro */
+  border-top: none; /* Sin borde superior para que esté pegado */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  opacity: 1; /* Completamente opaco */
+}
+
+#chat-messages {
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+  font-size: 0.95em;
+}
+
+#chat-messages .user {
+  text-align: right;
+  color: #000 !important;
+  margin-bottom: 12px;
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 8px; /* Esquinas redondeadas simples */
+  border: 1px solid #90caf9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: block;
+  max-width: 80%;
+  word-wrap: break-word;
+  margin-left: auto;
+}
+
+#chat-messages .bot {
+  text-align: left;
+  color: #000 !important;
+  margin-bottom: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  border-radius: 8px; /* Esquinas redondeadas simples */
+  border: 1px solid #ce93d8;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: block;
+  max-width: 85%;
+  line-height: 1.4em;
+  word-wrap: break-word;
+  margin-right: auto;
+}
+
+#chat-form {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+#chat-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 1em;
+}
+
+#chat-input:focus {
+  outline: none;
+}
+
+#chat-form button {
+  background: #c6140c;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+border-bottom-right-radius: 12px;
+}
+
+#chat-form button:hover {
+  background: #c21617;
+}
+
+/* Botones del header del chat (acciones) */
+.chat-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end; /* Alineados a la derecha */
+  align-items: center;
+  flex-wrap: nowrap; /* No se envuelven en móvil */
+}
+.chat-action-btn {
+  background: #c6140c;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 10px; /* Padding más pequeño */
+  font-size: 0.85em; /* Fuente más pequeña */
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  white-space: nowrap; /* No se rompe el texto */
+  min-width: auto; /* Ancho automático */
+}
+.chat-action-btn:hover {
+  background: #c21617;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.punto-verde {
+  display: inline-block;
+  margin-right: 1px;
+  width: 6px;
+  height: 6px;
+  background: #00c853;
+  border-radius: 50%;
+  vertical-align: middle;
+  animation: blink 1.5s infinite;
+}
+
+
+@media (max-width: 768px) {
+  #chat-widget {
+    bottom: 16px;
+    border-radius: 32px;
+    height: auto;
+    align-items: flex-end;
+    right: 8px;
+    left: auto;
+    max-width: calc(100vw - 8px); /* Siempre deja margen derecho */
+    box-sizing: border-box;
+  }
+
+  #chat-header {
+    font-size: 1em;
+    text-align: center;
+    width: auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  #chat-body {
+    width: 90%;
+    height: 450px; /* Altura fija muy alta en móvil */
+    background: #fce4ec; /* Rosa claro en móvil también */
+    border: 1px solid #f8bbd9; /* Borde rosa claro */
+    border-top: none; /* Sin borde superior para que esté pegado */
+    border-radius: 0 0 12px 12px; /* Solo esquinas inferiores */
+    margin-top: 0px; /* Sin margen para que esté pegado */
+  }
+  
+  /* Header en móvil cuando está abierto */
+  #chat-header.open {
+    width: 90%; /* Mismo ancho que el chat-body en móvil */
+    border-radius: 12px 12px 0 0;
+    border-bottom: none;
+    box-sizing: border-box;
+  }
+  
+  /* Botones de acción en móvil */
+  .chat-actions {
+    gap: 6px; /* Menor espacio entre botones */
+  }
+  
+  .chat-action-btn {
+    padding: 5px 8px; /* Aún más pequeño en móvil */
+    font-size: 0.8em; /* Fuente más pequeña en móvil */
+  }
+
+  #chat-messages {
+    font-size: 1em;
+    padding: 16px;
+  }
+  
+  #chat-messages .user {
+    max-width: 75%; /* Más pequeño en móvil */
+    padding: 8px 12px;
+    font-size: 0.95em;
+  }
+  
+  #chat-messages .bot {
+    max-width: 80%; /* Más pequeño en móvil */
+    padding: 10px 14px;
+    font-size: 0.95em;
+  }
+
+#chat-form    {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+#chat-input {
+  width: 90%;
+  min-width: 0;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+border-radius: 7px;
+}
+#chat-form button {
+  max-width: 80px;
+  min-width: 38px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+}
+
+

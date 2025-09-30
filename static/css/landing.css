@@ -1,0 +1,935 @@
+
+.body_landing {
+  text-align: center;
+  font-size: 1em !important;
+  line-height: 1.6em !important;
+  color: #fff !important; /* Texto blanco por defecto */
+  background: #000 !important; /* Fondo negro para todas las páginas */
+  min-height: 100vh !important;
+}
+
+/* Forzar fondo negro en todas las páginas */
+body, html {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+main {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.body_landing img {
+  display: block;         /* 👈 esto la centra de verdad */
+  margin: 0 auto ;   
+  /* border-radius removido para no afectar imágenes globalmente */
+  /* max-height removido para no capar la imagen principal en desktop */
+  text-align: center;     /* esto no afecta imágenes, pero no molesta */
+  display: block;  
+}
+
+.body_landing h1 {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    margin: 0px 0 8px 0;
+    color: #fff !important; /* Letras blancas */
+    background: linear-gradient(135deg, #c6140c, #e74c3c) !important;
+    padding: 15px 20px !important;
+    border-radius: 10px !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+    box-shadow: 0 4px 15px rgba(198, 20, 12, 0.3) !important;
+    font-size: 1.8em !important;
+    letter-spacing: 1px !important;
+}
+
+.body_landing p {
+  margin: 7px auto;
+  max-width: 350px;
+  color: #fff !important; /* Texto blanco */
+}
+
+/* Estilos para títulos en todas las páginas - FORZAR */
+h1, .body_landing h1, main h1 {
+  color: #c6140c !important; /* Títulos rojos */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+h2, .body_landing h2, main h2 {
+  color: #fff !important; /* Subtítulos blancos */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
+}
+
+h3, .body_landing h3, main h3 {
+  color: #c6140c !important; /* Títulos h3 rojos */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;
+}
+
+p, .body_landing p, main p {
+  color: #fff !important; /* Párrafos blancos */
+}
+
+/* Estilos para links y otros elementos - FORZAR */
+a, .body_landing a, main a {
+  color: #c6140c !important; /* Links rojos */
+  text-decoration: none;
+}
+
+a:hover, .body_landing a:hover, main a:hover {
+  color: #fff !important; /* Links blancos al hover */
+}
+
+b, .body_landing b, main b {
+  color: #fff !important; /* Texto en negrita blanco */
+}
+
+strong, .body_landing strong, main strong {
+  color: #c6140c !important; /* Texto strong rojo */
+}
+
+/* Forzar colores en elementos específicos */
+.seccion-principal, .seccion-landing {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(45, 45, 45, 0.6)) !important;
+  color: #fff !important;
+  border: 1px solid rgba(198, 20, 12, 0.3) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilos específicos para la página de sorteos */
+.sorteos-page {
+  background: #000 !important;
+  min-height: 100vh;
+}
+
+.sorteos-page main {
+  background: #000 !important;
+}
+
+/* Estilos específicos para la página de preguntas */
+.preguntas-page {
+  background: #000 !important;
+  min-height: 100vh;
+}
+
+.preguntas-page main {
+  background: #000 !important;
+}
+
+/* Efecto de brillo animado para preguntas */
+.preguntas-page .faq-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(198, 20, 12, 0.1), transparent);
+  transition: left 0.8s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.preguntas-page .faq-item:hover::before {
+  left: 100%;
+}
+
+/* Efecto de brillo animado */
+.seccion-principal::before, .seccion-landing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(198, 20, 12, 0.2), transparent);
+  transition: left 0.8s ease;
+  z-index: 1;
+}
+
+.seccion-principal:hover::before, .seccion-landing:hover::before {
+  left: 100%;
+}
+
+.seccion-principal:hover, .seccion-landing:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(198, 20, 12, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.margen_arriba, .margen_abajo, .margen_arribayabajo {
+  color: #fff !important;
+}
+
+.seccion-landing {
+  max-width: 600px;
+  margin: 15px auto 0 auto;  /* centrado */
+  padding: 10px 2% !important;
+  background: rgba(255, 255, 220, 0.1) !important; /* Transparente al 90% */
+  color: #fff !important; /* Texto blanco */
+  box-shadow: 0 10px 6px rgba(255,255,255,0.1) !important;
+  border-radius: 7px !important;
+  text-align: left; /* podés quitar el !important, no hace falta */
+}
+
+.seccion-landing img{
+  text-align: center;
+ width: 400px !important;
+  padding:  1px 10px !important;
+  margin: 2px auto !important;
+}
+
+.centrado.fiscalizado p  {
+margin-top:1px; padding:0 px;
+line-height:1px;
+
+}
+
+.ganador-card {
+  flex: 0 0 200px;
+  scroll-snap-align: start;
+  position: relative;
+}
+.ganador-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 0 !important; /* Sin bordes redondeados */
+}
+
+.nombre {
+  font-weight: 500;
+  padding: 5px;
+  font-size: 1.05em;
+  color: black;
+  background: #fff;
+}
+
+.info {
+  background: #c6140c;
+  padding: 10px 0;
+  border-radius: 0 0 12px 12px;
+  font-size: 0.95em;
+  font-weight: 500;
+  color:white;
+}
+
+.carrusel-container {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+
+  /* Opcional: fondo y borde si querés */
+  border-radius: 18px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+
+.carrusel-lista {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  justify-content: flex-start;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* iOS momentum scroll */
+  scrollbar-width: none; /* Firefox */
+}
+
+.carrusel-lista::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+
+.ganador-card:hover {
+  box-shadow: 0 2px 18px #0002;
+}
+
+
+
+.carrusel-flecha {
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  border: none;
+  background: #c6140c;
+  color: #fff;
+  box-shadow: 0 2px 8px #0002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+  font-size: 0; /* ocultar el carácter flecha del HTML */
+  opacity: 0.95;
+  touch-action: pan-y;
+  z-index: 10; /* asegurar que quede por encima de las tarjetas */
+}
+
+/* Reutilizamos el motivo de flecha circular del botón "Suscribite" */
+.carrusel-flecha::after {
+  content: "➤";
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: black;               /* igual que .flecha-circular */
+  background-color: white;    /* círculo blanco */
+  border-radius: 50%;
+  box-shadow: 0 1px 3px #0002;
+  transition: transform 0.15s ease;
+}
+
+.carrusel-flecha.izq { left: -6px; }
+.carrusel-flecha.der { right: -6px; }
+
+/* Direccionalidad */
+.carrusel-flecha.izq::after { transform: scaleX(-1); }
+
+/* Hover/focus states */
+.carrusel-flecha:hover { background: #b41215; }
+.carrusel-flecha:focus { outline: 2px solid #fff; outline-offset: 2px; }
+.carrusel-flecha.izq:hover::after { transform: translateX(-1px) scaleX(-1); }
+.carrusel-flecha.der:hover::after { transform: translateX(1px); }
+
+/* Mostrar un poco más visibles al pasar cerca */
+.carrusel-container:hover .carrusel-flecha { opacity: 1; }
+
+/* Resalte breve para cuando se carga/cambia el video principal */
+.video-preview.attention {
+  outline: 3px solid rgba(208, 21, 26, 0.45);
+  outline-offset: 2px;
+  animation: videoFlash 900ms ease-out;
+}
+@keyframes videoFlash {
+  0% { outline-color: rgba(208, 21, 26, 0.65); }
+  100% { outline-color: rgba(208, 21, 26, 0); }
+}
+
+/* Etiqueta de año en cada ganador */
+.ganador-card .anio-badge {
+  position: absolute;
+  top: 0px; /* Sin espacio arriba */
+  right: 0px; /* Sin espacio a la derecha */
+  padding: 8px 12px; /* Más padding */
+  background: #000 !important; /* Fondo negro sólido */
+  color: #fff !important; /* Letras blancas */
+  font-weight: bold !important;
+  font-size: 0.9em !important;
+  border-radius: 0 12px 0 12px !important; /* Esquinas redondeadas solo abajo */
+  z-index: 2;
+  border: 2px solid #fff !important; /* Borde blanco */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+  pointer-events: none;
+}
+
+
+.grupo-botones-procesadoras {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fila-superior {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.fila-inferior {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-procesadora {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 5px 9px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  max-width: 90vw;
+}
+
+.btn-procesadora:hover {
+  background-color: #f7f7f7;
+  border-color: #aaa;
+}
+
+.btn-procesadora img {
+height:33px;
+  margin-right: 3px ;
+border-radius: 0 !important;
+}
+
+.linea-icono {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 4px; /* ⬅️ Reducimos el espacio vertical */
+  position: relative;
+  padding-left: 2.2em; /* Espacio para el emoji */
+}
+
+.linea-icono .emoji {
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 1.2em;
+  line-height: 1.3;
+  min-width: 1.5em;
+margin:5px;
+  text-align: center;
+}
+
+.linea-icono p {
+  margin: 3px;             /* 🔥 Eliminamos márgenes heredados del user agent */
+  padding: 0;
+  line-height: 1.4em;    /* 👌 Ligero ajuste para compacidad */
+font-size:0.93em;
+}
+
+.linea-centrada p {
+  text-align: center;
+}
+
+#manito-click {
+  position: absolute;
+  width: 48px;
+  height: auto;
+  z-index: 9999;
+  top: 100vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  visibility: hidden; /* oculto hasta que inicie la animación */
+  pointer-events: none;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  will-change: transform, opacity; /* suaviza la animación */
+}
+
+#h1-suscribite.breathing {
+ display: inline-flex;
+ align-items: center; 
+  justify-content: center;
+  background: #c6140c;
+  color: #fff;
+  padding: 6px 3px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+  margin: 1px auto;
+  width:200px;
+
+}
+
+.flecha-circular:hover::after {
+  background-color: white;
+  color: #c6140c;
+  border-color: #c6140c;
+}
+
+.flecha-circular::after {
+  content: "➤";
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+  line-height: 1;
+  vertical-align: middle;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px #0002;
+}
+
+@media (max-width: 480px) {
+  .flecha-circular::after {
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+  }
+}
+
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+.breathing {
+  animation: breathing 1.8s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+@keyframes breath-antel {
+  0%, 100% { transform: scale(1); background-color: var(--antel-light, #c7e9fb); }
+  50% { transform: scale(1.05); background-color: #add8e6; } /*  ANTEL */
+}
+.breathing-antel {
+  animation: breath-antel 1.5s ease-in-out infinite;
+  /* valor por defecto: celeste un poco menos claro */
+  --antel-light: #c7e9fb;
+}
+/* Variantes de celeste para pruebas rápidas */
+.antel-light-1 { --antel-light: #c2eafb; }
+.antel-light-2 { --antel-light: #c7e9fb; }
+.antel-light-3 { --antel-light: #bfe3f4; }
+
+/* Colores estáticos (claros) para los botones de procesadoras */
+.btn-procesadora[data-procesadora="antel"] {
+  background-color: var(--antel-light, #c7e9fb);
+}
+.btn-procesadora[data-procesadora="antel"]:hover {
+  background-color: #add8e6; /* un pelín más intenso al hover */
+}
+
+.btn-procesadora[data-procesadora="movistar"] {
+  background-color: #d0f0c0; /* verde claro */
+}
+.btn-procesadora[data-procesadora="movistar"]:hover {
+  background-color: #78d689; /* tono hover ya usado en animación */
+}
+
+.btn-procesadora[data-procesadora="mercado_pago"] {
+  background-color: #fff59d; /* amarillo claro */
+}
+.btn-procesadora[data-procesadora="mercado_pago"]:hover {
+  background-color: #f7d21e; /* tono hover ya usado en animación */
+}
+
+
+@keyframes breath-movistar {
+  0%, 100% { transform: scale(1); background-color: #d0f0c0; }
+  50% { transform: scale(1.05); background-color: #78d689; } /*  MOVISTAR */
+}
+.breathing-movistar {
+  animation: breath-movistar 1.5s ease-in-out infinite;
+}
+
+@keyframes breath-mp {
+  0%, 100% { transform: scale(1); background-color: #fff59d; }
+  50% { transform: scale(1.05); background-color: #f7d21e; } /*  MERCADOPAGO (oscuro al crecer) */
+}
+.breathing-mercadopago {
+  animation: breath-mp 1.5s ease-in-out infinite;
+}
+
+/* Respeta usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .breathing,
+  .breathing-antel,
+  .breathing-movistar,
+  .breathing-mercadopago {
+    animation: none !important;
+  }
+}
+
+/* En dispositivos táctiles (sin hover), desactivar respiración por defecto */
+@media (hover: none) {
+  .breathing,
+  .breathing-antel,
+  .breathing-movistar,
+  .breathing-mercadopago {
+    animation: none !important;
+  }
+}
+
+/* Hero image: tamaño y redondeo consistente en desktop y mobile */
+.imagen-auto-principal {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Refuerzo de especificidad para mobile: solo la imagen principal */
+#imagen-c3-sms > img.imagen-auto-principal {
+  border-radius: 10px;
+}
+
+/* Asegurar que el contenedor también recorte (por si hay fondos/solapes) */
+#imagen-c3-sms {
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Efecto de película fotográfica para ganadores */
+.foto-ganador {
+  position: relative !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  border: 3px solid #000 !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+  background: #000 !important;
+  filter: sepia(0.3) contrast(1.1) brightness(0.9) !important;
+}
+
+/* Marco de película fotográfica */
+.foto-ganador::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: 
+    /* Bordes negros de película */
+    linear-gradient(to right, #000 0px, transparent 2px, transparent calc(100% - 2px), #000 100%),
+    linear-gradient(to bottom, #000 0px, transparent 2px, transparent calc(100% - 2px), #000 100%),
+    /* Perforaciones de película */
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 8px,
+      #333 8px,
+      #333 12px
+    ) !important;
+  background-size: 100% 100%, 100% 100%, 20px 100% !important;
+  background-position: 0 0, 0 0, 0 0 !important;
+  background-repeat: no-repeat !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  opacity: 0.7 !important;
+}
+
+/* Efecto vintage/sepia */
+.foto-ganador::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Overlay sepia */
+    rgba(139, 69, 19, 0.15),
+    /* Efecto de desgaste */
+    radial-gradient(circle at 20% 80%, rgba(0,0,0,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0,0,0,0.1) 0%, transparent 50%);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Hover effect */
+.foto-ganador:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.foto-ganador:hover::before {
+  opacity: 0.9;
+}
+
+.foto-ganador:hover::after {
+  opacity: 0.8;
+}
+
+/* Efecto cuando se hace clic */
+.foto-ganador:active {
+  transform: scale(0.98);
+}
+
+/* Efecto de flash cuando se carga */
+@keyframes filmFlash {
+  0% { filter: brightness(1) contrast(1); }
+  50% { filter: brightness(1.5) contrast(1.2); }
+  100% { filter: brightness(1) contrast(1); }
+}
+
+.foto-ganador.loading {
+  animation: filmFlash 0.5s ease-in-out;
+}
+
+/* Estilo para las tarjetas de ganadores */
+.card-ganador {
+  position: relative;
+  background: #f8f8f8;
+  border-radius: 0 !important; /* Sin bordes redondeados */
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-ganador:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Marco vintage para las tarjetas */
+.card-ganador::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #8B4513, #D2B48C, #8B4513);
+  border-radius: 0 !important; /* Sin bordes redondeados */
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Estilo específico para la sección principal en la página de ganadores */
+.ganadores-page .seccion-principal {
+  text-align: center;
+  max-width: 700px !important;
+  padding: 30px 20px !important;
+  margin: 20px auto !important;
+  border-radius: 0 !important; /* Sin bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+  font-size: 1em !important;
+  line-height: 1.5em !important;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d) !important; /* Fondo negro moderno */
+  color: #fff !important; /* Texto blanco */
+  border: 2px solid #c6140c !important; /* Borde rojo */
+  position: relative;
+}
+
+/* Efecto de brillo en la sección principal de ganadores */
+.ganadores-page .seccion-principal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(198, 20, 12, 0.2), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.ganadores-page .seccion-principal:hover::before {
+  left: 100%;
+}
+
+/* Título simplificado sin camarita */
+.titulo-ganador {
+  background: none !important; /* Sin fondo */
+  color: #c6140c !important; /* Letras rojas */
+  text-shadow: none !important;
+  font-family: 'Courier New', monospace;
+  font-weight: bold !important; /* Texto bold */
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 1.2em !important;
+  margin: 5px 0 10px !important;
+}
+
+/* ======================= */
+/*    ESTILOS PREMIOS      */
+/* ======================= */
+
+/* Carrusel de locales */
+.locales-carousel-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  border: 2px solid #c6140c;
+  border-radius: 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.locales-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.locales-track {
+  display: flex;
+  width: calc(320px * 8); /* 8 tarjetas duplicadas */
+  animation: none; /* Se controla con JavaScript */
+}
+
+.local-card {
+  flex: 0 0 300px;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  margin: 20px 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.local-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(198, 20, 12, 0.3);
+}
+
+.local-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.local-card h3 {
+  color: #c6140c;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.local-card p {
+  color: #666;
+  font-size: 0.9em;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Estilo específico para la página de premios */
+.premios-page .seccion-principal {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d) !important;
+  color: #fff !important;
+  border: 2px solid #c6140c !important;
+  border-radius: 0 !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4) !important;
+  padding: 40px 20px !important;
+  position: relative;
+}
+
+.premios-page .seccion-principal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(198, 20, 12, 0.2), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.premios-page .seccion-principal:hover::before {
+  left: 100%;
+}
+
+.premios-page .seccion-principal h2 {
+  color: #fff !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+
+/* Fondo negro para toda la página de premios */
+.premios-page {
+  background: #000 !important;
+  min-height: 100vh;
+}
+
+.premios-page main {
+  background: #000 !important;
+}
+
+/* Botón moderno */
+.premios-page #boton-suscribite {
+  background: linear-gradient(135deg, #c6140c, #e74c3c) !important;
+  color: #fff !important;
+  border: 3px solid #fff !important;
+  box-shadow: 0 6px 20px rgba(198, 20, 12, 0.4) !important;
+  transform: scale(1.05) !important;
+  transition: all 0.3s ease !important;
+}
+
+.premios-page #boton-suscribite:hover {
+  background: linear-gradient(135deg, #e74c3c, #c6140c) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 8px 25px rgba(198, 20, 12, 0.6) !important;
+}
+
+.titulo-ganador::before {
+  content: ''; /* Sin camarita */
+  display: none;
+}
+
+/* Fondo de rollo de película */
+.grid-ganadores {
+  background: #000; /* Fondo negro como rollo de película */
+  padding: 20px;
+  border-radius: 0 !important; /* Sin bordes redondeados */
+  position: relative;
+  box-shadow: 
+    inset 0 0 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Cuadrados blancos de perforaciones de película VERTICALES */
+.grid-ganadores::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    /* Perforaciones izquierda */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 15px,
+      #fff 15px,
+      #fff 20px,
+      transparent 20px,
+      transparent 35px
+    ),
+    /* Perforaciones derecha */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 15px,
+      #fff 15px,
+      #fff 20px,
+      transparent 20px,
+      transparent 35px
+    );
+  background-position: 
+    0 0,           /* Perforaciones izquierda */
+    calc(100% - 10px) 0; /* Perforaciones derecha */
+  background-size: 
+    10px 35px,     /* Tamaño de perforaciones verticales */
+    10px 35px;
+  background-repeat: repeat-y;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 0 !important; /* Sin bordes redondeados */
+}
+

@@ -1,0 +1,775 @@
+/* ============================================
+   ESTRUCTURA DE ESTILOS - SMSRegalos.com
+   --------------------------------------------
+   1. base.css         → Reset, tipografías, colores base
+   2. layout.css       → Header, footer, grid general
+   3. componentes.css  → Botones, tarjetas, formularios
+   4. modales.css      → Estilos de modales y popups
+   5. mobile.css       → Ajustes para dispositivos móviles
+   6. admin.css        → Panel de administración
+   7. animaciones.css  → Transiciones y efectos visuales
+   ============================================ */
+
+/* ============================================
+   base.css - Estilos base generales del sitio
+   ============================================ */
+
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FFF5F3;
+    color: #332;
+
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a, a:visited {
+    color: #c6140c;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+a:hover,
+a:focus {
+    color: #ab1113;
+    text-decoration: none;
+}
+
+a:active {
+    color: #760c0d;
+}
+
+main {
+    min-height: 75vh;
+    text-align: center;
+    padding: 7px  ;
+}
+
+main h1 {
+    text-align: center;
+    margin: 7px 0 0 0;
+    font-size: 1.3em;
+    font-weight: normal;
+    width: 100%;
+}
+
+main h2 {
+    text-align: center;
+    line-height: 1.4;
+    margin: 2px;
+    font-size: 1.1em;
+    font-weight: normal;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ 
+ main h2 b {
+    font-weight: 600;
+
+}
+
+main h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    color:darkslategrey;
+    margin : 5px 0 10px;
+}
+
+main p {
+    font-size: 1em;
+  line-height: 1.5em !important;
+}
+
+
+
+.seccion-principal {
+  text-align: center;
+  max-width: 700px !important;
+  padding: 5px !important;
+  margin: 10px auto !important;
+  border-radius: 7px !important;
+  box-shadow: 0 1px 6px rgba(255,255,255,0.1) !important;
+  font-size: 1em !important;
+  line-height: 1.5em !important;
+  background: rgba(241, 241, 220, 0.1) !important; /* Transparente al 90% */
+  color: #fff !important; /* Texto blanco */
+}
+
+
+.seccion-principal p {
+    font-size: 1em;
+    margin: 0;
+
+}
+.seccion-principal img {
+    display: block;
+    margin: 5px auto 0;
+    max-width: 450px;
+    width:100%;
+    border-radius: 7px;
+}
+
+
+
+.video-solo-visual {
+  pointer-events: none;
+  user-select: none;
+  width: 350px;      /* o lo que quieras */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+}
+
+.seccion-principal img.trofeo {
+    width: 80px !important;
+    display: block;
+    margin: 20px auto !important;
+    filter: drop-shadow(0 4px 8px rgba(198, 20, 12, 0.5)) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.seccion-principal img.trofeo:hover {
+    transform: scale(1.1) !important;
+}
+
+
+
+/* ======================= */
+/*    VIDEO RESPONSIVE     */
+/* ======================= */
+
+/* Variante de seccion sin fondo (mantiene el ancho de .seccion-principal) */
+.seccion-plain {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 600px; /* Limita el ancho máximo */
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.imagen_auto {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.bloque-temas,
+.bloque-suscripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 320px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, rgba(198, 20, 12, 0.15), rgba(231, 76, 60, 0.1)) !important;
+    border: 1px solid rgba(198, 20, 12, 0.3) !important;
+    border-radius: 12px;
+    color: #fff !important;
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    text-align: left;
+    margin-bottom: 24px;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover para los bloques */
+.bloque-temas:hover,
+.bloque-suscripcion:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.3),
+        0 0 15px rgba(198, 20, 12, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(198, 20, 12, 0.5) !important;
+}
+
+/* Efecto de brillo en los bloques */
+.bloque-temas::before,
+.bloque-suscripcion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.bloque-temas:hover::before,
+.bloque-suscripcion:hover::before {
+    left: 100%;
+}
+
+
+.seccion-principal .bloque-temas p  {
+    font-size: 1.1em;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    line-height: 1.6em;
+    color: #fff !important;
+    transition: all 0.3s ease !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    position: relative;
+    z-index: 2;
+}
+
+.seccion-principal .bloque-temas p:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: translateX(5px) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.seccion-principal .bloque-suscripcion p {
+    font-size: 0.8em;
+    margin: 6px;
+    display: flex;
+    align-items: center;
+    line-height: 2em;
+    color: #fff !important; /* Texto blanco */
+}
+
+
+.emoji {
+    font-size: 1.4em;
+    margin-right: 12px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+.emoji:hover {
+    transform: scale(1.3) rotate(10deg) !important;
+    filter: drop-shadow(0 4px 8px rgba(198, 20, 12, 0.5)) !important;
+}
+
+
+
+.bloque-sorteo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px auto;
+  max-width: 380px;
+  padding: 16px 20px 20px;
+  background: linear-gradient(135deg, rgba(198, 20, 12, 0.15), rgba(231, 76, 60, 0.1)) !important;
+  border: 1px solid rgba(198, 20, 12, 0.3) !important;
+  border-radius: 14px;
+  box-shadow: 
+      0 4px 15px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  text-align: left;
+  font-size: 1.05em;
+  line-height: 1.6em;
+  color: #fff !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover para bloques de sorteo */
+.bloque-sorteo:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.3),
+        0 0 15px rgba(198, 20, 12, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(198, 20, 12, 0.5) !important;
+}
+
+/* Efecto de brillo en bloques de sorteo */
+.bloque-sorteo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.bloque-sorteo:hover::before {
+    left: 100%;
+}
+
+.bloque-sorteo p {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  z-index: 2;
+}
+
+.bloque-sorteo p:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(5px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.bloque-sorteo .emoji {
+  font-size: 1.5em;
+  width: 1.8em;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+.bloque-sorteo .emoji:hover {
+  transform: scale(1.3) rotate(10deg) !important;
+  filter: drop-shadow(0 4px 8px rgba(198, 20, 12, 0.5)) !important;
+}
+
+.margen_arriba {
+  margin-top:  30px ;
+}
+
+.margen_arriba_mini {
+  margin-top:  18px ;
+}
+
+.margen_arribayabajo  {
+  margin:  15px 0 5px;
+}
+
+.margen_arribayabajo h2 {
+  margin: 25px 0 !important;
+  color: #c6140c !important; /* Texto rojo */
+  font-weight: bold !important;
+  font-size: 1.8em !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+.margen_arribayabajo h3 {
+  margin:  15px 0 ;
+}
+
+
+.margen_abajo  {
+  margin-bottom:  15px ;
+}
+
+
+/* ======================= */
+/*    IMAGEN TRES CRUCES   */
+/* ======================= */
+.imagen_tres_cruces {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 1px auto;
+}
+
+.imagen_locales {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+/* ======================= */
+/*    BASES LEGALES  */
+/* ======================= */
+.seccion-principal .bases {
+  text-align: justify;
+}
+
+.seccion-principal .bases p {
+  padding: 6px;
+  font-size: 1rem;
+  hyphens: auto;
+  line-height: 1.7em;
+  word-break: break-word;
+}
+
+.seccion-principal .bases b {
+font-weight: 500;
+}
+
+.seccion-principal .bases h3 {
+font-weight: 500; 
+font-size: 1.2em;
+margin-left: 5px;
+}
+
+.seccion-principal .sobre-nosotros {
+  text-align: justify;
+  max-width: 500px;
+  margin: 10px auto 15px;
+}
+
+.seccion-principal .sobre-nosotros p {
+  padding: 0px 0px 15px ;
+font-size:1em;
+}
+
+.seccion-principal .sobre-nosotros p b {
+font-weight: 600;
+}
+
+.seccion-principal .sobre-nosotros h2 {
+  padding: 0px 0px 15px ;
+  text-align: left;
+}
+
+
+
+/* ======================= */
+/*    FAQ / PREGUNTAS      */
+/* ======================= */
+.faq {
+    max-width: 700px;
+    margin: 32px auto;
+    background: transparent !important;
+    border-radius: 0;
+}
+
+.faq-item {
+    border-radius: 12px !important;
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(45, 45, 45, 0.6)) !important;
+    border: 1px solid rgba(198, 20, 12, 0.3) !important;
+    overflow: hidden;
+    transition: all 0.3s ease !important;
+    margin-bottom: 20px;
+    position: relative;
+    backdrop-filter: blur(10px) !important;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.3),
+        0 0 15px rgba(198, 20, 12, 0.2) !important;
+    border-color: rgba(198, 20, 12, 0.5) !important;
+}
+
+.faq-question {
+    width: 100%;
+    background: transparent !important;
+    border: none;
+    text-align: left;
+    padding: 20px 24px;
+    font-size: 1.15em;
+    cursor: pointer;
+    color: #fff !important;
+    outline: none;
+    transition: all 0.3s ease !important;
+    position: relative;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.faq-question::after {
+    content: "▼";
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #c6140c !important;
+    transition: all 0.3s ease !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.faq-item.open .faq-question {
+    background: linear-gradient(135deg, rgba(198, 20, 12, 0.3), rgba(231, 76, 60, 0.2)) !important;
+    color: #fff !important;
+    box-shadow: 
+        0 4px 15px rgba(198, 20, 12, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.faq-item.open .faq-question::after {
+    transform: translateY(-50%) rotate(-180deg) !important;
+    color: #fff !important;
+    filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.3)) !important;
+}
+
+.faq-answer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) !important;
+    backdrop-filter: blur(5px) !important;
+    padding: 0 24px;
+    font-size: 1em;
+    text-align: left;
+    color: #fff !important;
+    font-family: 'Montserrat', Arial, sans-serif;
+    transition: all 0.4s ease-out !important;
+    line-height: 1.6em;
+    border-top: 1px solid rgba(198, 20, 12, 0.2) !important;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-item.open .faq-answer {
+    max-height: fit-content;
+    opacity: 1;
+    padding: 20px 24px !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08)) !important;
+    backdrop-filter: blur(8px) !important;
+    border-radius: 0 0 12px 12px !important;
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.boton-baja {
+  display: inline-block;
+  background-color: #e41a1c;  /* Rojo Coca-Cola */
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+  margin-bottom:15px;
+}
+
+.boton-baja:hover {
+  transform: scale(1.01);
+  animation: none;
+  color: #fff;
+}
+.contenedor-boton {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+
+/* ======================= */
+/*    GRID DE GANADORES    */
+/* ======================= */
+.grid-ganadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 0.5rem ;
+}
+
+.card-ganador {
+  background: #fffdfc;
+  border-radius: 0 !important; /* Sin bordes redondeados */
+  box-shadow: 0 2px 16px lightgrey;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.justificado {
+  text-align: justify;
+  align-items: center;     /* vertical */
+  margin:auto;
+  width: 70%
+}
+
+.titulo-ganador {
+  color: #c6140c !important; /* Letras rojas */
+  font-size: 1.2rem !important;
+  font-weight: bold !important; /* Texto bold */
+  background: none !important; /* Sin fondo */
+  padding: 0 !important;
+  text-align: center !important;
+  margin: 5px 0 10px !important;
+}
+
+/* Texto de las tarjetas de ganadores en negro */
+.card-ganador p {
+  color: #000 !important;
+  font-weight: 500;
+}
+
+/* Nombre del ganador en negro */
+.info-ganador h2:first-of-type {
+  color: #000 !important;
+  font-weight: bold;
+}
+
+/* Premio en rojo - solo el que tiene estilo inline */
+.info-ganador h2[style*="color: #c6140c"] {
+  color: #c6140c !important;
+  font-weight: bold;
+}
+
+/* Premio específico en rojo */
+.card-ganador h2 b {
+  color: #c6140c !important;
+  font-weight: bold;
+}
+
+.foto-ganador {
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+
+}
+
+
+.grupo-ganadores-año {
+  margin: 0 auto !important; /* Sin espacio entre años */
+  padding: 0 !important; /* Sin padding */
+  background: transparent !important; /* Sin fondo verde */
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: 92vw !important;
+}
+
+.titulo-año {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff !important; /* Letras blancas */
+  font-weight: bold !important;
+  background: #000 !important; /* Fondo negro como el rollo */
+  margin: 0 !important; /* Sin espacio entre años */
+  padding: 20px !important; /* Padding igual al grid-ganadores */
+  border: none !important; /* Sin borde */
+  border-radius: 0 !important; /* Sin bordes redondeados */
+  box-shadow: none !important; /* Sin sombra */
+  position: relative;
+}
+
+/* Perforaciones de película en los títulos de año */
+.titulo-año::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    /* Perforaciones izquierda */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 15px,
+      #fff 15px,
+      #fff 20px,
+      transparent 20px,
+      transparent 35px
+    ),
+    /* Perforaciones derecha */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 15px,
+      #fff 15px,
+      #fff 20px,
+      transparent 20px,
+      transparent 35px
+    );
+  background-position:
+    0 0,           /* Perforaciones izquierda */
+    calc(100% - 10px) 0; /* Perforaciones derecha */
+  background-size:
+    10px 35px,     /* Tamaño de perforaciones verticales */
+    10px 35px;
+  background-repeat: repeat-y;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+
+/* ======================= */
+/*    GRID PARA SORTEOS    */
+/* ======================= */
+.grid-sorteos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.card-sorteo {
+  background: #fff5f3;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px lightgrey;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-sorteo {
+  color: #c6140c;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+
+.video-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;       /* tamaño del título */
+    font-weight: 700;      /* bold */
+    text-align: center;
+    margin: 20px 0 8px;
+    color: #222;
+  }
+  .video-subtitle {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.5rem;     /* tamaño del subtítulo */
+    font-weight: 700;      /* bold */
+    text-align: center;
+    margin: 0 0 20px;
+    color: #444;
+  }
+

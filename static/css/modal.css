@@ -1,0 +1,823 @@
+/* ======================= */
+/*    PROCESADORAS         */
+/* ======================= */
+
+.precio-sms {
+  grid-column: 1 / -1;  /* 🔥 ocupa todo el ancho del grid */
+  text-align: center;
+  margin-top: 5px;
+  font-size: small;
+}
+
+
+.detalle-precio {
+  margin: 4px;
+  font-size: 0.75em;
+  color: #222;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.planes-lista {
+  display: grid;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(45, 45, 45, 0.8)) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(198, 20, 12, 0.3) !important;
+  border-radius: 15px !important;
+  padding: 20px !important;
+  margin-top: 20px !important;
+  color: #fff !important;
+}
+
+
+.planes-lista .linea-con-icono {
+  grid-column: 1 / -1;                /* Ocupar todo el ancho */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-self: center;
+  padding-bottom: 8px;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+
+
+#no-mobile-msg p {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.icono-inline {
+  display: inline-block;
+  vertical-align: middle;
+  height: 25px;
+  width: auto;
+  object-fit: contain;
+margin-bottom:5px;
+}
+
+
+.logo-mp {
+  height: 50px;
+  max-width: 170px;
+}
+
+
+.logo-antel,
+.logo-movistar {
+  height: 30px;
+}
+
+.logo-movistar {
+  padding-bottom: 1px;
+}
+
+  
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+.breathing {
+  animation: breathing 1.8s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+/* ======================= */
+/*    LISTA DE EQUIPOS     */
+/* ======================= */
+
+.equipos-lista {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(45, 45, 45, 0.8)) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(198, 20, 12, 0.3) !important;
+  border-radius: 15px !important;
+  padding: 20px !important;
+  color: #fff !important;
+}
+
+.equipos-lista .linea-con-icono {
+  grid-column: 1 / -1;              /* que ocupe toda la fila */
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #fff !important;
+}
+
+
+
+.equipo-item {
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid rgba(198, 20, 12, 0.3) !important;
+  padding: 15px !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) !important;
+  backdrop-filter: blur(10px) !important;
+  color: #fff !important;
+}
+
+.equipo-item span {
+  margin-top: 100px;
+}
+
+.equipo-item:hover,
+.equipo-item:focus {
+  background: linear-gradient(135deg, rgba(198, 20, 12, 0.8), rgba(198, 20, 12, 0.6)) !important;
+  color: #fff !important;
+  transform: scale(1.05) !important;
+  border-color: rgba(198, 20, 12, 0.8) !important;
+  box-shadow: 0 8px 25px rgba(198, 20, 12, 0.3) !important;
+}
+
+.equipo-item:hover img,
+.equipo-item:focus img {
+  background: rgba(255, 255, 255, 0.2) !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) !important;
+}
+
+/* ======================= */
+/*    IMÁGENES MODAL       */
+/* ======================= */
+
+.equipo-item img {
+  width: 48px !important;
+  height: 48px !important;
+  margin-bottom: 10px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+
+/* ======================= */
+/*    BOTÓN SUSCRIBITE     */
+/* ======================= */
+#boton-suscribite {
+
+ display: inline-flex;
+ align-items: center; 
+  justify-content: center;
+  border: none;
+  background: #c6140c;
+  color: #fff;
+  padding: 4px 3px;
+  border-radius: 10px;
+  font-size: 1.3em;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+  margin: 1px auto;
+  width:200px;
+  cursor: pointer;
+}
+
+
+
+.flecha-circular:hover::after {
+  background-color: white;
+  color: #d0151a;
+
+}
+
+.flecha-circular::after {
+  content: "➤";
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+  line-height: 1;
+  vertical-align: middle;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid #c6140c;
+  box-shadow: 0 1px 3px #0002;
+}
+
+@media (max-width: 480px) {
+  .flecha-circular::after {
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+  }
+}
+
+
+#boton-suscribite:hover.breathing,
+#boton-suscribite:focus.breathing {
+  animation: none;
+}
+/* ======================= */
+/*    MODAL SUSCRIPCIÓN    */
+/* ======================= */
+
+/* Modal de video */
+#modal-video {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95) !important;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Modal de suscripción - Pantalla completa flotante */
+.modal-suscripcion {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(26, 26, 26, 0.98)) !important;
+  backdrop-filter: blur(10px) !important;
+  z-index: 3000;
+  animation: fadeIn 0.4s ease-out forwards;
+  overflow: hidden;
+  /* Asegurar que esté completamente independiente */
+  isolation: isolate;
+  pointer-events: auto;
+}
+
+/* Prevenir scroll del body cuando el modal está abierto */
+body.modal-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+/* Contenido del modal de video */
+#modal-video .modal-contenido {
+  background: transparent;
+  padding: 0;
+  width: 95vw !important;
+  height: 95vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  border-radius: 25px !important;
+  box-shadow: 
+    0 0 0 30px #1a1a1a,
+    0 0 0 35px #333,
+    0 0 60px rgba(0,0,0,0.8) !important;
+  border: 4px solid #666 !important;
+  position: relative;
+  overflow: hidden;
+  animation: zoomIn 0.25s ease-out forwards;
+  text-align: center;
+}
+
+/* Contenido del modal de suscripción - Pantalla completa */
+.modal-suscripcion .modal-contenido {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(45, 45, 45, 0.8)) !important;
+  backdrop-filter: blur(15px) !important;
+  color: #fff !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  border-radius: 0 !important;
+  border: 2px solid rgba(198, 20, 12, 0.3) !important;
+  box-shadow: 
+    0 0 50px rgba(198, 20, 12, 0.2),
+    inset 0 0 50px rgba(255, 255, 255, 0.05) !important;
+  padding: 40px !important;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  animation: slideInFromTop 0.5s ease-out forwards;
+}
+
+
+
+/* Estilos específicos para el modal de suscripción */
+.modal-suscripcion .modal-contenido h1 {
+  color: #c6140c !important;
+  font-size: 2.5em !important;
+  font-weight: bold !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+  margin: 20px 0 30px 0 !important;
+  text-align: center;
+}
+
+.modal-suscripcion .equipos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+  width: 100%;
+  max-width: 800px;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(45, 45, 45, 0.8)) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(198, 20, 12, 0.3) !important;
+  border-radius: 15px !important;
+  padding: 20px !important;
+  color: #fff !important;
+}
+
+.modal-suscripcion .planes-lista {
+  display: grid;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(45, 45, 45, 0.8)) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(198, 20, 12, 0.3) !important;
+  border-radius: 15px !important;
+  padding: 20px !important;
+  margin-top: 20px !important;
+  color: #fff !important;
+}
+
+.modal-suscripcion .equipo-item {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(198, 20, 12, 0.3) !important;
+  border-radius: 15px !important;
+  padding: 20px !important;
+  text-align: center;
+  color: #fff !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-suscripcion .equipo-item:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  box-shadow: 
+    0 8px 25px rgba(198, 20, 12, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(198, 20, 12, 0.6) !important;
+}
+
+.modal-suscripcion .equipo-item img {
+  width: 60px !important;
+  height: 60px !important;
+  object-fit: contain !important;
+  margin-bottom: 15px !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) !important;
+}
+
+.modal-suscripcion .equipo-item div {
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+  color: #fff !important;
+}
+
+.modal-suscripcion .planes-lista .linea-con-icono {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-self: center;
+  padding-bottom: 8px;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.modal-suscripcion .plan-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(198, 20, 12, 0.3) !important;
+  border-radius: 12px !important;
+  text-align: center;
+  padding: 15px !important;
+  font-size: 1em !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 110px;
+  margin: auto;
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+  color: #fff !important;
+}
+
+.modal-suscripcion .plan-card:hover,
+.modal-suscripcion .plan-card:focus {
+  background: linear-gradient(135deg, rgba(198, 20, 12, 0.8), rgba(198, 20, 12, 0.6)) !important;
+  color: #fff !important;
+  transform: scale(1.05) !important;
+  border-color: rgba(198, 20, 12, 0.8) !important;
+  box-shadow: 0 8px 25px rgba(198, 20, 12, 0.3) !important;
+}
+
+.modal-suscripcion .plan-card img {
+  width: 48px !important;
+  height: 48px !important;
+  margin-bottom: 8px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+.modal-suscripcion .modal-cerrar {
+  position: absolute !important;
+  top: 20px !important;
+  right: 30px !important;
+  background: rgba(198, 20, 12, 0.8) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 1.5em !important;
+  cursor: pointer !important;
+  z-index: 10 !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.modal-suscripcion .modal-cerrar:hover {
+  background: rgba(198, 20, 12, 1) !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 6px 20px rgba(198, 20, 12, 0.4) !important;
+}
+
+/* Estilos para el modal de video */
+#modal-video .modal-contenido h2 {
+  margin: 20px 0;
+}
+
+#modal-video .video-container {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  padding-bottom: 0 !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  margin-top: 0 !important;
+}
+
+#iframe-modal-video {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  border-radius: 20px !important;
+}
+
+
+
+
+
+
+
+.plan-card:hover {
+  transform: scale(1.03);
+}
+
+
+
+
+.plan-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(198, 20, 12, 0.3) !important;
+  border-radius: 12px !important;
+  text-align: center;
+  padding: 15px !important;
+  font-size: 1em !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 110px;
+  margin: auto;
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+  color: #fff !important;
+}
+
+
+
+.plan-card:hover,
+.plan-card:focus {
+  background: linear-gradient(135deg, rgba(198, 20, 12, 0.8), rgba(198, 20, 12, 0.6)) !important;
+  color: #fff !important;
+  transform: scale(1.05) !important;
+  border-color: rgba(198, 20, 12, 0.8) !important;
+  box-shadow: 0 8px 25px rgba(198, 20, 12, 0.3) !important;
+}
+
+.plan-card:hover img,
+.plan-card:focus img {
+  background: rgba(255, 255, 255, 0.2) !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) !important;
+}
+
+.plan-card img {
+  width: 48px !important;
+  height: 48px !important;
+  margin-bottom: 8px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+
+
+/* BOTÓN CERRAR */
+
+.modal-cerrar {
+  position: absolute !important;
+  top: 10px !important; /* Más cerca del borde */
+  right: 10px !important; /* Más cerca del borde */
+  width: 40px !important; /* Más pequeño */
+  height: 40px !important; /* Más pequeño */
+  font-size: 20px !important; /* Fuente más pequeña */
+  background: #ff4444 !important;
+  border: 3px solid #fff !important; /* Borde más delgado */
+  border-radius: 50% !important;
+  color: white !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 10001 !important;
+  padding: 0 !important;
+  line-height: 1;
+}
+
+
+#cerrar-modal-video:hover,
+.modal-cerrar:hover {
+  background: #ff6666 !important;
+  transform: scale(1.1) !important;
+}
+
+/* Botones de navegación flotantes */
+#btn-prev-video,
+#btn-next-video {
+  position: absolute !important;
+  z-index: 10002 !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  width: 90px !important;
+  height: 90px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+  color: white !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.6) !important;
+  backdrop-filter: blur(10px) !important;
+  text-align: center !important;
+  line-height: 1.1 !important;
+  padding: 10px !important;
+}
+
+/* Ocultar el contenido original (flechas) */
+#btn-prev-video > *,
+#btn-next-video > * {
+  display: none !important;
+}
+
+#btn-prev-video:hover,
+#btn-next-video:hover {
+  background: rgba(0, 0, 0, 0.85) !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.8) !important;
+}
+
+/* Texto de los botones - se actualiza dinámicamente con JavaScript */
+#btn-prev-video::before {
+  content: attr(data-ganador) !important;
+  font-size: 9px !important;
+  font-weight: bold !important;
+  margin-bottom: 2px !important;
+  text-transform: capitalize !important;
+  letter-spacing: 0.3px !important;
+  display: block !important;
+}
+
+#btn-next-video::before {
+  content: attr(data-ganador) !important;
+  font-size: 9px !important;
+  font-weight: bold !important;
+  margin-bottom: 2px !important;
+  text-transform: capitalize !important;
+  letter-spacing: 0.3px !important;
+  display: block !important;
+}
+
+/* Texto del mes */
+#btn-prev-video::after {
+  content: attr(data-month) !important;
+  font-size: 8px !important;
+  font-weight: normal !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2px !important;
+  opacity: 0.9 !important;
+  display: block !important;
+  margin-top: 1px !important;
+}
+
+#btn-next-video::after {
+  content: attr(data-month) !important;
+  font-size: 8px !important;
+  font-weight: normal !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2px !important;
+  opacity: 0.9 !important;
+  display: block !important;
+  margin-top: 1px !important;
+}
+
+/* Si no hay data-ganador, mostrar texto por defecto */
+#btn-prev-video:not([data-ganador])::before {
+  content: "Mes Anterior" !important;
+}
+
+#btn-next-video:not([data-ganador])::before {
+  content: "Mes Siguiente" !important;
+}
+
+/* Posicionamiento en desktop y móvil horizontal (horizontal) */
+@media (min-width: 768px) {
+  #btn-prev-video {
+    left: 30px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  #btn-next-video {
+    right: 30px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  #btn-prev-video:hover,
+  #btn-next-video:hover {
+    transform: translateY(-50%) scale(1.05) !important;
+  }
+}
+
+/* Posicionamiento en móvil vertical - botones ocultos por defecto */
+@media (max-width: 767px) and (orientation: portrait) {
+  #btn-prev-video {
+    left: 30px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+  }
+  
+  #btn-next-video {
+    right: 30px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+  }
+  
+  /* Mostrar botones cuando se detecte gesto de deslizar */
+  #modal-video.swipe-detected #btn-prev-video,
+  #modal-video.swipe-detected #btn-next-video {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  #btn-prev-video:hover,
+  #btn-next-video:hover {
+    transform: translateY(-50%) scale(1.05) !important;
+  }
+  
+  /* Ajustar botón de cerrar en móvil vertical */
+  .modal-cerrar {
+    top: 5px !important;
+    right: 5px !important;
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 18px !important;
+    z-index: 10003 !important;
+    background: rgba(255, 68, 68, 0.9) !important;
+    border: 2px solid white !important;
+  }
+  
+}
+
+/* Posicionamiento en móvil horizontal (landscape) */
+@media (max-width: 767px) and (orientation: landscape) {
+  #btn-prev-video {
+    left: 30px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  #btn-next-video {
+    right: 30px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  
+  #btn-prev-video:hover,
+  #btn-next-video:hover {
+    transform: translateY(-50%) scale(1.05) !important;
+  }
+}
+
+/* Ocultar título y descripción del video */
+#modal-video-titulo,
+#modal-video-descripcion {
+  display: none !important;
+}
+
+
+/* FLECHAS VIDEO */
+
+#btn-prev-video,
+#btn-next-video {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+#btn-prev-video:hover,
+#btn-next-video:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#btn-prev-video {
+  left: -60px;
+}
+
+#btn-next-video {
+  right: -60px;
+}
+
+
+/* ANIMACIONES */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+  from { 
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
